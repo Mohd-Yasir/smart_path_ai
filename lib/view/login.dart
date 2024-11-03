@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:smart_path_ai/view/signup.dart';
 
 class Login extends StatelessWidget {
   late final TextEditingController _emailController = TextEditingController();
@@ -177,7 +179,9 @@ class Login extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.off(Signup());
+                            },
                             child: const Text(
                               'Sign in',
                               style: TextStyle(
@@ -187,7 +191,7 @@ class Login extends StatelessWidget {
                               ),
                             ))
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
